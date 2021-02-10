@@ -45,7 +45,7 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter(jshintStylish));
 });
 
-gulp.task('test', [ 'lint' ], function () {
+gulp.task('test', gulp.series('lint' , function () {
   'use strict';
   return gulp.src(paths.tests, {
     read: false
@@ -53,12 +53,12 @@ gulp.task('test', [ 'lint' ], function () {
     .pipe(mocha({
       reporter: 'nyan'
     }));
-});
+}));
 
-gulp.task('watch', [ 'test' ], function() {
+gulp.task('watch', gulp.series('test' , function() {
   'use strict';
   gulp.watch(paths.scripts, [ 'test' ]);
   gulp.watch(paths.tests, [ 'test' ]);
-});
+}));
 
-gulp.task('default', [ 'test' ]);
+gulp.task('default', gulp.series('test'));
