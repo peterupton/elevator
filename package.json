@@ -1,5 +1,5 @@
 {
-  "name": "elevator",
+  "name": "@peterupton/elevator",
   "version": "2.2.4",
   "description": "Windows UAC elevation that just works",
   "main": "lib/elevator.js",

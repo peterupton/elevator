@@ -4,9 +4,7 @@ elevator
 > Windows UAC elevation that just works.
 
 [![npm version](https://badge.fury.io/js/elevator.svg)](http://badge.fury.io/js/elevator)
-[![dependencies](https://david-dm.org/resin-io-modules/elevator.svg)](https://david-dm.org/resin-io-modules/elevator.svg)
-[![Build status](https://ci.appveyor.com/api/projects/status/ysweh6h4ed4ak114/branch/master?svg=true)](https://ci.appveyor.com/project/resin-io/elevator/branch/master)
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/resin-io/chat)
+[![dependencies](https://david-dm.org/peterupton/elevator.svg)](https://david-dm.org/resin-io-modules/elevator.svg)
 
 Description
 -----------
@@ -40,9 +38,9 @@ Documentation
 This function will yield an `Error` containing a code that equals
 `ELEVATE_CANCELLED` if the elevation was cancelled by the user.
 
-**Kind**: static method of <code>[elevator](#module_elevator)</code>  
-**Summary**: Execute a command with UAC elevation  
-**Access:** public  
+**Kind**: static method of <code>[elevator](#module_elevator)</code>
+**Summary**: Execute a command with UAC elevation
+**Access:** public
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -56,7 +54,7 @@ This function will yield an `Error` containing a code that equals
 | [options.waitForTermination] | <code>Boolean</code> |  | Waits for termination; equivalent to "start /wait command". |
 | callback | <code>function</code> |  | callback (error, stdout, stderr) |
 
-**Example**  
+**Example**
 ```js
 elevator.execute([ 'cmd.exe' ], {
   waitForTermination: true
@@ -75,10 +73,10 @@ elevator.execute([ 'cmd.exe' ], {
 This function will throw an `Error` containing a code that equals
 `ELEVATE_CANCELLED` if the elevation was cancelled by the user.
 
-**Kind**: static method of <code>[elevator](#module_elevator)</code>  
-**Summary**: Execute a command with UAC elevation (Sync)  
-**Returns**: <code>String</code> - stdout buffer  
-**Access:** public  
+**Kind**: static method of <code>[elevator](#module_elevator)</code>
+**Summary**: Execute a command with UAC elevation (Sync)
+**Returns**: <code>String</code> - stdout buffer
+**Access:** public
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -91,7 +89,7 @@ This function will throw an `Error` containing a code that equals
 | [options.hidden] | <code>Boolean</code> |  | When using -c or -k, start "cmd" in hidden mode. |
 | [options.waitForTermination] | <code>Boolean</code> |  | Waits for termination; equivalent to "start /wait command". |
 
-**Example**  
+**Example**
 ```js
 elevator.executeSync([ 'cmd.exe' ], {
   waitForTermination: true
