@@ -1,9 +1,9 @@
 {
   "name": "elevator",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Windows UAC elevation that just works",
   "main": "lib/elevator.js",
-  "homepage": "https://github.com/resin-io-modules/elevator",
+  "homepage": "https://github.com/peterupton/elevator",
   "repository": {
     "type": "git",
     "url": "git://github.com/peterupton/elevator.git"
@@ -13,14 +13,14 @@
   },
   "scripts": {
     "test": "gulp test",
-    "prepublish": "gulp test",
-    "readme": "jsdoc2md --template doc/README.hbs lib/elevator.js > README.md"
+    "prepublish": "gulp test"
   },
   "keywords": [
     "windows",
     "win32",
     "uac",
     "elevate",
+    "sudo",
     "elevator"
   ],
   "author": "Juan Cruz Viotti <juan@resin.io>",
